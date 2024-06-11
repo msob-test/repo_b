@@ -1,0 +1,16 @@
+name: Triggered Action
+
+on:
+  repository_dispatch:
+    types: [trigger-action-b]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Print Payload
+        run: echo "Triggered by repository: ${{ github.event.client_payload.repo }}"
