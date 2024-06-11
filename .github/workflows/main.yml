@@ -3,6 +3,7 @@ name: Triggered Action
 on:
   repository_dispatch:
     types: [trigger-action-b]
+  workflow_dispatch:
 
 jobs:
   build:
