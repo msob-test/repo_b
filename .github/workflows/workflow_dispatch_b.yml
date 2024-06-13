@@ -1,6 +1,9 @@
 name: Execute BPMN
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
 
 permissions:
   contents: write
